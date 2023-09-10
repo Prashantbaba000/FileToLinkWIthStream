@@ -128,8 +128,6 @@ async def start(bot: Client, cmd: Message):
             for i in range(len(message_ids)):
                 send_msg = await send_media_and_reply(bot, user_id=cmd.from_user.id, file_id=int(message_ids[i]))
                 lazyfiles.append(send_msg)
-                print(f"Message ID {i + 1} appended to lazyfiles: {send_msg.message_id}")
-
 
             # Send a warning message to the user
             warning_msg = await cmd.reply_text(text=f"<b><u>❗️❗️❗️❗️❗️❗️--IMPORTANT--❗️❗️❗️❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>",
