@@ -100,17 +100,11 @@ async def Lazy_start():
             if(Config.LAZY_MODE == True):
                 await cmd.reply_photo(photo=lazy_pic,
                 caption=Config.LAZY_HOME_TEXT.format(cmd.from_user.first_name, cmd.from_user.id),
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                        
-                        ],
-                        [
-                           
+           
             else :
                 await cmd.reply_photo(photo=lazy_pic,
                 caption=Config.HOME_TEXT.format(cmd.from_user.first_name, cmd.from_user.id),
-                reply_markup=InlineKeyboardMarkup(
+                
                     [
                         [
                           
@@ -124,8 +118,7 @@ async def Lazy_start():
                 message_ids = []
                 if GetMessage.text:
                     message_ids = GetMessage.text.split(" ")
-                    _response_msg = await cmd.reply_text(
-                        text=f"**Total Files:** `{len(message_ids)}`",
+                    _response_msg =ext=f"**Total Files:** `{len(message_ids)}`",
                         quote=True,
                         disable_web_page_preview=True
                     )
@@ -362,49 +355,19 @@ async def Lazy_start():
             await cmd.message.edit(
                 Config.ABOUT_BOT_TEXT,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-             
-                        ]
-                    ]
-                )
-            )
-
-        elif "aboutdevs" in cb_data:
+         elif "aboutdevs" in cb_data:
             await cmd.message.edit(
                 Config.ABOUT_DEV_TEXT,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                                          )
-            )
-
-        elif "gotohome" in cb_data:
+               "gotohome" in cb_data:
             if(Config.LAZY_MODE == True):
                 await cmd.message.edit(
                 Config.LAZY_HOME_TEXT.format(cmd.message.chat.first_name, cmd.message.chat.id),
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            ]
-                        ]
-                    ]
-                )
-            )
-            else :
+       else :
                 await cmd.message.edit(
                 Config.HOME_TEXT.format(cmd.message.chat.first_name, cmd.message.chat.id),
-                disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                                       ]
-                )
-            )
-
-        elif "refreshForceSub" in cb_data:
+                disable_web_page_pr       elif shForceSub" in cb_data:
             if Config.UPDATES_CHANNEL:
                 if Config.UPDATES_CHANNEL.startswith("-100"):
                     channel_chat_id = int(Config.UPDATES_CHANNEL)
@@ -445,32 +408,16 @@ async def Lazy_start():
                 await cmd.message.edit(
                 Config.LAZY_HOME_TEXT.format(cmd.message.chat.first_name, cmd.message.chat.id),
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                                     ]
-                        ]
-                    ]
-                )
-            )
-            else :
+                reply_markup=InlineKeyboardMarkup( :
                 await cmd.message.edit(
                 Config.HOME_TEXT.format(cmd.message.chat.first_name, cmd.message.chat.id),
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                                                  ]
-                    ]
-                )
-            )
-
-        elif cb_data.startswith("ban_user_"):
+               rtswith("ban_user_"):
             user_id = cb_data.split("_", 2)[-1]
             if Config.UPDATES_CHANNEL is None:
                 await cmd.answer("ꜱᴏʀʀʏ ꜱɪʀ, ʏᴏᴜ ᴅɪᴅɴ'ᴛ ꜱᴇᴛ ᴀɴʏ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ!", show_alert=True)
                 return
-            if not int(cmd.from_user.id) == Config.BOT_OWNER:
+            if not int(cmd.from_user== Config.BOT_OWNER:
                 await cmd.answer("ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴅᴏ ᴛʜᴀᴛ!", show_alert=True)
                 return
             try:
