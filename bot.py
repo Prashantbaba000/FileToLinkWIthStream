@@ -364,13 +364,7 @@ async def Lazy_start():
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [
-                            InlineKeyboardButton("⚡️SФUЯCΞ CФDΞS ФF ß⊕Γ",
-                                                url="https://github.com/LazyDeveloperr/MissRozy")
-                        ],
-                        [
-                            InlineKeyboardButton("GФ HФMΞ", callback_data="gotohome"),
-                            InlineKeyboardButton("♥️Aß⊕ut Đ€V", callback_data="aboutdevs")
+             
                         ]
                     ]
                 )
@@ -383,8 +377,7 @@ async def Lazy_start():
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("⚡️SФUЯCΞ CФDΞS ФF ß⊕Γ",
-                                              )
+                                          )
             )
 
         elif "gotohome" in cb_data:
