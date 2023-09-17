@@ -72,6 +72,7 @@ import sys
 
 MediaList = {}
 Bot.start()
+loop = asyncio.get_event_loop()
 
 
 PORT = "8080"
@@ -116,15 +117,19 @@ async def Lazy_start():
                 caption=Config.LAZY_HOME_TEXT.format(cmd.from_user.first_name, cmd.from_user.id),
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        InlineKeyboardButton("🍿Update Group", url="https://t.me/FILMYKHOJ")
+                        [                            
+                          InlineKeyboardButton("🍿Update Group", url="https://t.me/FILMYKHOJ")                            
+                        ]
                     ]
-                    ))
+                   ))
             else :
                 await cmd.reply_photo(photo=lazy_pic,
                 caption=Config.HOME_TEXT.format(cmd.from_user.first_name, cmd.from_user.id),
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        InlineKeyboardButton("🍿Update Group", url="https://t.me/FILMYKHOJ")
+                        [                            
+                          InlineKeyboardButton("🍿Update Group", url="https://t.me/FILMYKHOJ")                            
+                        ]
                     ]
                 ))
             
@@ -396,7 +401,9 @@ async def Lazy_start():
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        InlineKeyboardButton("🍿Update Group", url="https://t.me/FILMYKHOJ")
+                        [                            
+                          InlineKeyboardButton("🍿Update Group", url="https://t.me/FILMYKHOJ")                            
+                        ]
                     ]
                 )
             )
@@ -406,7 +413,9 @@ async def Lazy_start():
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        InlineKeyboardButton("🍿Update Group", url="https://t.me/FILMYKHOJ")
+                        [                            
+                          InlineKeyboardButton("🍿Update Group", url="https://t.me/FILMYKHOJ")                            
+                        ]
                     ]
                 )
             )
@@ -454,7 +463,9 @@ async def Lazy_start():
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        InlineKeyboardButton("🍿Update Group", url="https://t.me/FILMYKHOJ")
+                        [                            
+                          InlineKeyboardButton("🍿Update Group", url="https://t.me/FILMYKHOJ")                            
+                        ]
                     ]
                 )
             )
@@ -464,7 +475,9 @@ async def Lazy_start():
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        InlineKeyboardButton("🍿Update Group", url="https://t.me/FILMYKHOJ")
+                        [                            
+                          InlineKeyboardButton("🍿Update Group", url="https://t.me/FILMYKHOJ")                            
+                        ]
                     ]
                 )
             )
