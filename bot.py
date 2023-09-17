@@ -117,7 +117,8 @@ async def Lazy_start():
                 reply_markup=InlineKeyboardMarkup(
                     [
                         InlineKeyboardButton("🍿Update Group", url="https://t.me/FILMYKHOJ")
-                    ]]))
+                    ]
+                    ))
             else :
                 await cmd.reply_photo(photo=lazy_pic,
                 caption=Config.HOME_TEXT.format(cmd.from_user.first_name, cmd.from_user.id),
